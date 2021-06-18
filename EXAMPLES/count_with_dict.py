@@ -6,7 +6,7 @@ with open("../DATA/breakfast.txt") as breakfast_in:
         breakfast_item = line.rstrip('\n\r')
         if breakfast_item in counts:   # <2>
             counts[breakfast_item] = counts[breakfast_item] + 1   # <3>
-        else:
+        else:  # if item is not already a key
             counts[breakfast_item] = 1 # <4>
 
 for item, count in counts.items():
